@@ -1,3 +1,7 @@
+#Andromeda - Flag Capturing System 
+#Copyright (c) Jannis Kirschner
+#Licence 2017
+
 from scapy.all import *
 
 cache = []
@@ -11,16 +15,20 @@ def packet_callback(packet):
 		del cache[0]	
 
 def headerscan(packet):
-	regexp = re.compile(r'/^\w{31}=$/.')
+	#Define search patterns here
+	regexp = re.compile(r'YOUR REGEX')
 	if regexp.search(packet):
 		trigger()
 
 	else:
-		print ""
+		false()
 
 def trigger():
+	#Define trigger actions here
 	print cache
 
+def false():
+	#Define action when no hit
+	print ""
 
-
-dump = sniff(iface="eth0",prn=packet_callback)
+dump = sniff(iface="YOUR INTERFACE",prn=packet_callback)
