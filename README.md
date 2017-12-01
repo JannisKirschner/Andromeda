@@ -8,3 +8,10 @@ Why is this script superior to other solutions?
   <li>It's secure - the less code the less vulnerabilities</li>
   <li>Configuration is simple - Just start :)</li>
 </ul>
+
+
+## Requirements:
+<ul>
+  <li>Python 2.X</li>
+  <li>Scapy (http://www.secdev.org/projects/scapy/)</li>
+</ul>
